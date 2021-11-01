@@ -35,15 +35,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Model model= modelList.get(position);
-        holder.RVname.setText(model.getSname());
-        holder.RVdname.setText(model.getDname());
-        holder.RVtotal.setText(""+Math.toIntExact((Long)model.getTotal()));
-        holder.RVdeath.setText(""+Math.toIntExact((Long)model.getDeath()));
-        holder.RVcured.setText(""+Math.toIntExact((Long)model.getCured()));
-        holder.RVactive.setText(""+Math.toIntExact((Long)model.getActive()));
-        holder.RVincactive.setText(""+Math.toIntExact((Long)model.getIncAct()));
-        holder.RVinccured.setText(""+Math.toIntExact((Long)model.getIncRec()));
-        holder.RVincdeath.setText(""+Math.toIntExact((Long)model.getIncDea()));
+        holder.name.setText(model.getSname());
+        holder.dname.setText(model.getDname());
+        holder.total.setText(""+Math.toIntExact((Long)model.getTotal()));
+        holder.death.setText(""+Math.toIntExact((Long)model.getDeath()));
+        holder.cured.setText(""+Math.toIntExact((Long)model.getCured()));
+        holder.active.setText(""+Math.toIntExact((Long)model.getActive()));
+        holder.incactive.setText(""+Math.toIntExact((Long)model.getIncAct()));
+        holder.inccured.setText(""+Math.toIntExact((Long)model.getIncRec()));
+        holder.incdeath.setText(""+Math.toIntExact((Long)model.getIncDea()));
     }
     @Override
     public int getItemCount() {
@@ -56,28 +56,28 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder>{
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private  TextView  RVname;
-        private  TextView  RVdname;
-        private TextView RVtotal;
-        private TextView RVdeath;
-        private TextView RVcured;
-        private TextView RVactive;
-        private TextView RVincactive;
-        private TextView RVinccured;
-        private TextView RVincdeath;
+        private  TextView  name;
+        private  TextView  dname;
+        private TextView total;
+        private TextView death;
+        private TextView cured;
+        private TextView active;
+        private TextView incactive;
+        private TextView inccured;
+        private TextView incdeath;
 
         public ViewHolder(@NonNull View itemView) {
 
             super(itemView);
-            RVname=itemView.findViewById(R.id.state);
-            RVdname=itemView.findViewById(R.id.district);
-            RVactive =itemView.findViewById(R.id.active);
-            RVcured=itemView.findViewById(R.id.cured);
-            RVdeath=itemView.findViewById(R.id.death);
-            RVtotal=itemView.findViewById(R.id.total);
-            RVincactive=itemView.findViewById(R.id.incactive);
-            RVinccured=itemView.findViewById(R.id.inccured);
-            RVincdeath=itemView.findViewById(R.id.incdeath);
+            name=itemView.findViewById(R.id.state);
+            dname=itemView.findViewById(R.id.district);
+            active =itemView.findViewById(R.id.active);
+            cured=itemView.findViewById(R.id.cured);
+            death=itemView.findViewById(R.id.death);
+            total=itemView.findViewById(R.id.total);
+            incactive=itemView.findViewById(R.id.incactive);
+            inccured=itemView.findViewById(R.id.inccured);
+            incdeath=itemView.findViewById(R.id.incdeath);
         }
 
 
